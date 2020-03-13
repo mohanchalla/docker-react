@@ -6,4 +6,4 @@ before_install:
    - dokcer build -t krishnachalla/docker-react -f Dockerfile.dev .
 
 script:
-   - dcoker run krishnachalla/docker-react npm run test -- --coverage
+   - dcoker run -e CI=true krishnachalla/docker-react npm run test -- --coverage
